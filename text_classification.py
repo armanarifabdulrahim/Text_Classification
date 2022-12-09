@@ -87,9 +87,9 @@ X_train, X_test, y_train, y_test = train_test_split(train_text,train_subject)
 # Step 6) Model Development
 
 model = Sequential()
-model.add(Embedding(words,128))
-model.add(LSTM(128,return_sequences=True))
-model.add(LSTM(128))
+model.add(Embedding(words,64))
+model.add(LSTM(64,return_sequences=True))
+model.add(LSTM(64))
 model.add(Dense(y_train.shape[1],activation='softmax'))
 model.summary
 
@@ -98,7 +98,7 @@ model.compile(optimizer='adam',loss='categorical_crossentropy',metrics='accuracy
 logdir = os.path.join(os.getcwd(), 'logs', datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
 tb = TensorBoard(log_dir=logdir)
 
-history = model.fit(X_train,y_train, validation_data=(X_test,y_test), epochs=10, callbacks=tb)
+history = model.fit(X_train,y_train, validation_data=(X_test,y_test), epochs=5, callbacks=tb)
 
 
 
