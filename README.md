@@ -10,7 +10,7 @@
 
 ## Project description
 
-This aim of thisproject is to classify the type of news. There are 2 types of news that that this dataset can be classified to, which is either Political News or World News.
+This aim of this project is to classify the type of news. There are 2 types of news that that this dataset can be classified to, which is either Political News or World News.
 These are steps used to complete this project.
  
 #### 1. Data Loading
